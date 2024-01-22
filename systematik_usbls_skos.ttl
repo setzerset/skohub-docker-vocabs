@@ -1,20 +1,30 @@
-@base <https://purl.archive.org/systematik_usbls_skos>.
+@base <https://purl.archive.org/systematik_usbls_skos/>.
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-<scheme> a skos:ConceptScheme ;
+<Lesesaal> a skos:ConceptScheme ;
  skos:prefLabel "Systematik des Lesesaals der USB Köln"@de ;                            
  dct:title "Systematik des Lesesaals der USB Köln"@de; 
  dct:description "Kennzeichnung der Gruppen ohne Medien in der Systematik des Lesesaals"@de; 
  dct:creator "https://d-nb.info/gnd/40600-4" ; #Identifier
- skos:definition "https://github.com/oflimm/openbib/blob/master/portal/perl/conf/usbls.yml"
- skos:hasTopConcept <K> .                  
-#ist hier die anforderung nach min 2 weiteren informativen aussagen erfüllt? zählt bspw. prefLabel/hasTopConcept dazu? 
-#Nein, es zählt nicht, ich glaube.
+ dct:issued "2022-11-08" ;
+ skos:definition "Begrenzte SKOS-Version der Systematik auf https://github.com/oflimm/openbib/blob/master/portal/perl/conf/usbls.yml" ;
+ skos:hasTopConcept <A>, <B>, <G>, <GG>, <K>, <L>, <MW>, <N>, <PH>, <PP>, <PS>, <R>, <Rh>, <T>, <V>, <W> .
+
+#ist hier die anforderung nach min 2 weiteren informativen aussagen erfüllt? zählt bspw. prefLabel/hasTopConcept dazu? creator, definition, issued... das sind schon 2.
+
+<A> a skos:concept ;
+ skos:prefLabel "Allgemeines"@de ;
+ skos:altLabel "Art history"@en, "Musicology"@en ; 
+ skos:notation "A" ;
+ skos:topConceptOf <Lesesaal>.
 
 
 
+
+ skos:narrower <A>, <B>, <G>, <GG>, <K>, <L>, <MW>, <N>, <PH>, <PP>, <PS>, <R>, <Rh>, <T>, <V>, <W> ; 
+#Beispieldatei: Farben mit Hierarchie
 
 colour: a skos:ConceptScheme ;
     dct:title "Colour vocabulary with hierarchy"@en, "Farbvokabular mit Hierarchie"@de ;
