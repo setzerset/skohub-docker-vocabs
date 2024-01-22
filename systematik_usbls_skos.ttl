@@ -3,6 +3,19 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
+<scheme> a skos:ConceptScheme ;
+ skos:prefLabel "Systematik des Lesesaals der USB Köln"@de ;                            
+ dct:title "Systematik des Lesesaals der USB Köln"@de; 
+ dct:description "Kennzeichnung der Gruppen ohne Medien in der Systematik des Lesesaals"@de; 
+ dct:creator "https://d-nb.info/gnd/40600-4" ; #Identifier
+ skos:definition "https://github.com/oflimm/openbib/blob/master/portal/perl/conf/usbls.yml"
+ skos:hasTopConcept <K> .                  
+#ist hier die anforderung nach min 2 weiteren informativen aussagen erfüllt? zählt bspw. prefLabel/hasTopConcept dazu? 
+#Nein, es zählt nicht, ich glaube.
+
+
+
+
 colour: a skos:ConceptScheme ;
     dct:title "Colour vocabulary with hierarchy"@en, "Farbvokabular mit Hierarchie"@de ;
     dct:creator "Hans Dampf"@de ;
