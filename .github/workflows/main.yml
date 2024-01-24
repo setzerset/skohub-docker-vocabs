@@ -82,7 +82,7 @@ jobs:
 
       - name: make .env file
 
-        run: echo "BASEURL=/skohub-docker-vocabs" > .env
+        run: echo "BASEURL=/systematik_usbls_skos" > .env
 
       - name: build public dir with docker image
         run: >
